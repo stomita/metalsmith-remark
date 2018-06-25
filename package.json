@@ -9,19 +9,18 @@
     "email": "beneb.info@gmail.com",
     "url": "http://beneb.info"
   },
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
     "pretest": "eslint src",
     "prepublish": "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
     "test": "ava src/__tests__"
   },
   "files": [
-    "LICENSE-MIT",
-    "dist"
+    "LICENSE-MIT"
   ],
   "dependencies": {
-    "remark": "^5.0.1",
-    "remark-html": "^5.0.0"
+    "remark": "^9.0.0",
+    "remark-html": "^7.0.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
