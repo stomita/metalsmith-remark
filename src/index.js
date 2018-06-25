@@ -10,7 +10,7 @@ module.exports = function metalsmithRemark (plugins, settings) {
                 return true;
             }
             const markdown = String(files[file].contents);
-            const result = remark().data('settings', settings || {}).use(plugins || []).use(html).process(markdown);
+            const result = remark().data('settings', settings || {}).use(plugins || []).use(html).processSync(markdown);
             files[file].contents = new Buffer(result.contents);
             const data = files[file];
             delete files[file];
